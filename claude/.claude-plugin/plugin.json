@@ -1,0 +1,17 @@
+{
+  "name": "tldw",
+  "version": "1.0.0",
+  "description": "Find X videos, analyze YouTube or X links and supplied text, then read source-backed summaries and saved transcripts.",
+  "author": {
+    "name": "tldw.sh",
+    "email": "support@tldw.sh"
+  },
+  "license": "MIT",
+  "keywords": ["video", "research", "summaries", "transcripts", "mcp", "tldw"],
+  "homepage": "https://tldw.sh/agents",
+  "icon": "./assets/icon.png",
+  "documentationUrl": "https://tldw.sh/docs",
+  "supportUrl": "https://tldw.sh/support",
+  "privacyPolicyUrl": "https://tldw.sh/privacy",
+  "termsOfServiceUrl": "https://tldw.sh/terms"
+}

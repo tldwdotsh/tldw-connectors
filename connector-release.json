@@ -1,0 +1,53 @@
+{
+  "source_commit": "62125918eb73cc568c104fe5885250e7a669704b",
+  "source_dirty": false,
+  "bundles": [
+    {
+      "provider": "claude",
+      "version": "1.0.0",
+      "archive": "tldw-claude-1.0.0.zip",
+      "sha256": "396bf92478a6f3d6804870eddeeb7e0156f3e91b75ed10632c651a946f03ee22",
+      "files": {
+        ".claude-plugin/plugin.json": "000e97592091b4a00fccd6e140db0cc7e111d307147bdc6245e90a5d0e755447",
+        ".mcp.json": "7c4e61e5a246740fe1acd54460147edcffd9816406f94fc2a78fd4cc19dc8216",
+        "LICENSE": "66c5c642314847f06544018eb8224259f5eabf17ed2a5c04c4f28e7f1f684821",
+        "README.md": "bd5fab08026c96969a29893f966065051dafb9fa5ed4e39ba640dc5bdda3d272",
+        "assets/icon.png": "8f4955863a47f812e2291b3f31793535285837cdf0599530a96085ecb60c2941",
+        "skills/tldw/LICENSE": "66c5c642314847f06544018eb8224259f5eabf17ed2a5c04c4f28e7f1f684821",
+        "skills/tldw/SKILL.md": "74bfee0ac0f56aeeccc6fa968a69665b4b98d5ebb909e7766a911d107b89b2ac",
+        "skills/tldw/agents/openai.yaml": "1c0dbc071528d5df197b67962263b53fe6dd6289f976717ca4cfe6cb898ce114",
+        "skills/tldw/references/errors.md": "572261fe9d3016c59ca520f4cf5a1b7c026714d189d8f1dd00426a2d2ee6a16c",
+        "skills/tldw/references/setup.md": "47edddb6b7dd7b77d74e8202c5ce0bbacad67c0930b7469ef0c42fe377e9c066",
+        "skills/tldw/references/source-limits.md": "754571449d9706de42c2a8d073b3fdaebda025fdd91f7e986c93d9694cd43727",
+        "skills/tldw/references/tools.md": "cebe2c48914bd1afa53c334cbad9ed650e034da80e5682f7808e330eb6b01ce7",
+        "skills/tldw/references/workflows.md": "510f72888d582dd6aacfc11536a7b034f3ddbc07385abdd11f9fb676dc39d3d8"
+      },
+      "canonical_skill_files": 8,
+      "submitted": false
+    },
+    {
+      "provider": "openai",
+      "version": "1.0.0",
+      "archive": "tldw-openai-1.0.0.zip",
+      "sha256": "d7e83bb6c3213c9a3365c4bfbf1bf8410c630b8d4001e62cc76021b038cd39df",
+      "files": {
+        ".codex-plugin/plugin.json": "723ea9f793273eb0c512bd48c90f5775162db29eb50d290684157297b6070db7",
+        ".mcp.json": "d7f4b4a80f5f3621393c646d6a7f61f662e206ee59e9bc88771e03abd0e61f18",
+        "LICENSE": "66c5c642314847f06544018eb8224259f5eabf17ed2a5c04c4f28e7f1f684821",
+        "README.md": "4f7b8af971a0e3ff694b0bd0a7050852d4ff13eb42135a5a0384fe4d0208ff9f",
+        "assets/icon.png": "8f4955863a47f812e2291b3f31793535285837cdf0599530a96085ecb60c2941",
+        "skills/tldw/LICENSE": "66c5c642314847f06544018eb8224259f5eabf17ed2a5c04c4f28e7f1f684821",
+        "skills/tldw/SKILL.md": "74bfee0ac0f56aeeccc6fa968a69665b4b98d5ebb909e7766a911d107b89b2ac",
+        "skills/tldw/agents/openai.yaml": "1c0dbc071528d5df197b67962263b53fe6dd6289f976717ca4cfe6cb898ce114",
+        "skills/tldw/references/errors.md": "572261fe9d3016c59ca520f4cf5a1b7c026714d189d8f1dd00426a2d2ee6a16c",
+        "skills/tldw/references/setup.md": "47edddb6b7dd7b77d74e8202c5ce0bbacad67c0930b7469ef0c42fe377e9c066",
+        "skills/tldw/references/source-limits.md": "754571449d9706de42c2a8d073b3fdaebda025fdd91f7e986c93d9694cd43727",
+        "skills/tldw/references/tools.md": "cebe2c48914bd1afa53c334cbad9ed650e034da80e5682f7808e330eb6b01ce7",
+        "skills/tldw/references/workflows.md": "510f72888d582dd6aacfc11536a7b034f3ddbc07385abdd11f9fb676dc39d3d8"
+      },
+      "canonical_skill_files": 8,
+      "submitted": false
+    }
+  ],
+  "network_calls": 0
+}
