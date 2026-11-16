@@ -1,13 +1,22 @@
 # Customer tools
 
-Call `account_usage` before submitting. The server exposes these 12 customer
+Call `account_usage` before submitting. The server exposes these 15 customer
 tools and three prompts. `tldw://guide` is the live read-only connection guide.
 Client-specific prefixes do not change a tool's name or required scope.
+
+The public metadata tools `public_config`, `public_security` and `billing_catalog`
+are optional setup reads. They need an authenticated MCP connection but no
+additional account scope. They report public service/activation/catalog facts,
+not an account's balance or enrollment state, and never start checkout or change
+billing. Direct REST reads of the same three public routes need no credential.
 
 <!-- generated:tldw-tools -->
 | Tool | Scope | Use |
 | --- | --- | --- |
-| `account_usage` | `account:read` | Read current plan, credits, rates and source/audio/concurrency/search limits before submitting. |
+| `account_usage` | `account:read` | Read current plan, credits, rates and source/concurrency/search limits before submitting. |
+| `public_config` | No additional scope | Read public service identity, policy/contact information and enabled feature flags when needed for setup. |
+| `public_security` | No additional scope | Read the current public Free allowance and activation-policy facts when needed for setup. |
+| `billing_catalog` | No additional scope | Read public plans, processing rates, text conversion and current limits; this never starts or changes a purchase. |
 | `analyze_media` | `jobs:write` | Submit one authorized source with instructions and a stable idempotency key. |
 | `get_job` | `jobs:read` | Read the same durable job and its polling guidance. |
 | `wait_job` | `jobs:read` | Wait on the same job; a client timeout does not cancel it. |
@@ -31,7 +40,10 @@ one of the plan's monthly searches, and the count resets each billing period;
 left. Check `video.over_plan_limit`, then pass a chosen result's `url` to
 `analyze_media`.
 
-`transcription` and `force_asr`: do not set; the server decides. Developers can
-override these options through the SDK. A user-authorized `max_credits` bounds
-spending; it does not grant a plan feature or bypass source restrictions.
+Omit `transcription` and `force_asr`: legacy values are accepted for compatibility
+but do not enable audio. Fresh audio transcription is not supported on any plan.
+A user-authorized `max_credits` bounds spending without granting plan features or
+bypassing source restrictions. `CAPTIONS_UNAVAILABLE` releases the failed job's
+hold without a processing-credit charge; stop or accept authorized source text,
+and do not resubmit automatically.
 Do not infer privileges from an account name, role or credential prefix.

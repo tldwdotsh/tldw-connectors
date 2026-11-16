@@ -3,26 +3,30 @@
 OAuth-only submission bundles for the hosted [tldw.sh](https://tldw.sh) MCP
 service at `https://api.tldw.sh/mcp`.
 
-These files are publicly available for installation and directory review.
-**The Claude and OpenAI directory listings have not been submitted or approved.**
-Publishing this repository and release does not imply directory acceptance.
+These files are public installation and directory-review materials. Publishing a
+bundle does not establish submission, approval or availability in a vendor directory.
 
 | Bundle | Source folder | Manifest |
 | --- | --- | --- |
 | Claude | [`claude/`](claude/) | `.claude-plugin/plugin.json` |
 | ChatGPT and Codex | [`openai/`](openai/) | `.codex-plugin/plugin.json` |
 
-Each folder contains 13 files, including the canonical tldw skill **0.3.3**, an
-icon and MIT license. The **1.0.0** submission bundles are separate from the
-generic agent plugin and JavaScript/Python SDK releases. Each release ZIP has a
-single `tldw/` top-level folder; use the provider-specific ZIP from the
-[1.0.0 release](https://github.com/tldwdotsh/tldw-connectors/releases/tag/v1.0.0).
-`connector-release.json` records provenance and exact bundle/file SHA256 hashes.
+Each folder contains 13 files, including the canonical tldw skill **0.3.5**, an
+icon and MIT license. The **1.0.2** bundles are separate from the generic agent
+plugin and JavaScript/Python SDK releases. Each release ZIP has a single `tldw/`
+top-level folder; use the provider-specific ZIP from the
+[1.0.2 release](https://github.com/tldwdotsh/tldw-connectors/releases/tag/v1.0.2).
+`connector-release.json` records source provenance and exact bundle/file SHA256
+hashes. The earlier [1.0.0 release](https://github.com/tldwdotsh/tldw-connectors/releases/tag/v1.0.0)
+remains unchanged.
 
 Sign in through the host's OAuth flow using your own tldw.sh account. No secret
-is included in these packages. Check your account's credits and limits before
-processing. Hosted discovery searches X; supply YouTube links or use your
-agent's own discovery tools. Saved summaries and transcripts remain separate.
+is included. Check `account_usage` before processing. Optional public metadata
+tools read service configuration, activation facts and the public catalog;
+these still use the authenticated MCP connection and cannot initiate purchases.
+Hosted discovery searches X; supply YouTube links or use your agent's own tools.
+Processing reuses captions or saved source; fresh audio transcription is unavailable.
+Saved summaries and transcripts remain separate.
 
 Start with the provider folder's README or the current
 [connection instructions](https://tldw.sh/agents). Directory submission, owner
