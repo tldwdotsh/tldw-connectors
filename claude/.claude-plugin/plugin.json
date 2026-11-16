@@ -1,6 +1,6 @@
 {
   "name": "tldw",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Find X videos, analyze YouTube or X links and supplied text, then read source-backed summaries and saved transcripts.",
   "author": {
     "name": "tldw.sh",

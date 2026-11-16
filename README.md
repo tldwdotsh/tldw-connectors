@@ -11,21 +11,25 @@ bundle does not establish submission, approval or availability in a vendor direc
 | Claude | [`claude/`](claude/) | `.claude-plugin/plugin.json` |
 | ChatGPT and Codex | [`openai/`](openai/) | `.codex-plugin/plugin.json` |
 
-Each folder contains 13 files, including the canonical tldw skill **0.3.5**, an
-icon and MIT license. The **1.0.2** bundles are separate from the generic agent
+Each folder contains 13 files, including the canonical tldw skill **0.3.6**, an
+icon and MIT license. The **1.0.3** bundles are separate from the generic agent
 plugin and JavaScript/Python SDK releases. Each release ZIP has a single `tldw/`
 top-level folder; use the provider-specific ZIP from the
-[1.0.2 release](https://github.com/tldwdotsh/tldw-connectors/releases/tag/v1.0.2).
+[1.0.3 release](https://github.com/tldwdotsh/tldw-connectors/releases/tag/v1.0.3).
 `connector-release.json` records source provenance and exact bundle/file SHA256
 hashes. The earlier [1.0.0 release](https://github.com/tldwdotsh/tldw-connectors/releases/tag/v1.0.0)
-remains unchanged.
+and [1.0.2 release](https://github.com/tldwdotsh/tldw-connectors/releases/tag/v1.0.2)
+remain unchanged.
 
 Sign in through the host's OAuth flow using your own tldw.sh account. No secret
 is included. Check `account_usage` before processing. Optional public metadata
 tools read service configuration, activation facts and the public catalog;
 these still use the authenticated MCP connection and cannot initiate purchases.
 Hosted discovery searches X; supply YouTube links or use your agent's own tools.
-Processing reuses captions or saved source; fresh audio transcription is unavailable.
+Processing reuses captions or saved source first. Where audio processing is enabled
+for the platform, missing usable captions trigger automatic original-audio
+transcription on every plan at 1 credit per minute. Legacy controls cannot disable
+or force audio. Read live account availability and keep the authorized ceiling.
 Saved summaries and transcripts remain separate.
 
 Start with the provider folder's README or the current

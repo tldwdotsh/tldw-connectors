@@ -5,7 +5,7 @@ source-backed summaries and saved transcripts. This Claude directory bundle
 connects to the hosted tldw.sh service through OAuth. Processing runs on tldw.sh;
 the bundle contains no local media server or model-provider credentials.
 
-This source prepares bundle **1.0.2**, a directory submission candidate.
+This source prepares bundle **1.0.3**, a directory submission candidate.
 The separate **1.0.0** release remains unchanged; its Claude plugin submission
 was reported by the owner, but approval has not been confirmed. The generic plugin and SDKs are independently
 versioned releases.
@@ -65,10 +65,7 @@ Visual understanding, dubbing and generated audio or video are not provided.
 Free and Hobby are the public offers. Account usage reports actual credits and
 source limits, including retained paid entitlements.
 Caption and usable saved-transcript processing costs 1 credit per media minute.
-Fresh audio transcription is not supported on any plan. Legacy `transcription`
-and `force_asr` values are accepted for compatibility and ignored; omit them.
-`CAPTIONS_UNAVAILABLE` releases the failed job hold without a processing-credit
-charge. Stop or accept authorized source text; do not resubmit automatically.
+tldw.sh reuses usable saved source or accessible captions first. When audio processing is enabled for the source platform, missing usable captions trigger automatic original-audio transcription on every plan at the same 1 credit per source minute. Read live `account_usage` availability and limits. Omit `transcription` and `force_asr`: legacy values are ignored, including `transcription=never`; they cannot disable or force audio. `CAPTIONS_UNAVAILABLE` means the source could not be read with the available processing capabilities. The failed job releases its hold without a processing-credit charge. Stop or accept authorized source text; do not resubmit automatically. Blocked or temporary retrieval failures retain their own error codes and do not trigger audio transcription. Honor the user's authorized credit ceiling.
 Agents cannot buy credits or change billing.
 
 ## Tools and permissions
